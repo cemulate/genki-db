@@ -3,11 +3,11 @@ var templates = {};
 var appTemplate = null;
 
 var reqs = partials.map(t => {
-	return $.get("/templates/" + t + ".html", r => {
+	return $.get("templates/" + t + ".html", r => {
 		templates[t] = r;
 	});
 });
-reqs.push($.get("/templates/app.html", r => {
+reqs.push($.get("templates/app.html", r => {
 	appTemplate = r;
 }));
 
