@@ -50,7 +50,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('frontend', function() {
-    var frontendPackages = ["foundation-sites", "jquery"];
+    var frontendPackages = ["foundation-sites", "jquery", "ractive", "jquery.typewatch"];
 
     var glob = "node_modules/+(" + frontendPackages.join("|") + ")/**/*";
     gutil.log(glob);

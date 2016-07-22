@@ -1,0 +1,107 @@
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Genki Vocab</li>
+            <li><a href="#" on-click="set('kanjiMode', false)">{{#if !kanjiMode}} <strong>Vocab</strong> {{else}} Vocab {{/if}}</a></li>
+            <li><a href="#" on-click="set('kanjiMode', true)">{{#if kanjiMode}} <strong>Kanji</strong> {{else}} Kanji {{/if}}</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><input id="filter-input" type="search" placeholder="Filter by lesson..."></li>
+            <li><a href="https://github.com/cemulate/genki-vocab">View on Github</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div style="height:20px"></div>
+
+{{#if !kanjiMode}}
+
+    {{#vocab}}
+    {{#if (lessonFilter == null || lessonFilter.indexOf(Lesson) > -1)}}
+
+    <div class="row">
+        <div class="large-2 columns japanese-text larger-text">
+            <a target="_blank" href="{{'http://jisho.org/search/' + ((Kanji == "") ? Kana : Kanji)}}"> {{Kanji == "" ? Kana : Kanji}} </a>
+        </div>
+        <div class="large-2 columns japanese-text larger-text">
+            {{Kana}}
+        </div>
+        <div class="large-8 columns larger-text">
+            {{Meaning}}
+        </div>
+    </div>
+    <hr>
+
+    {{/if}}
+    {{/}}
+
+{{else}}
+
+    <div class="row">
+        <div class="large-9 columns">
+            {{#kanji}}
+            {{#if (lessonFilter == null || lessonFilter.indexOf(Lesson) > -1)}}
+
+            <a class="japanese-text kanji-display {{#if this != selectedKanji}} unselected {{/if}}" on-click="set('selectedKanji', this)">{{Kanji}}</a>
+
+            {{/if}}
+            {{/}}
+        </div>
+
+        <div class="large-3 columns">
+
+            {{#if selectedKanji != null}}
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <a target="_blank" href="{{'http://jisho.org/search/' + selectedKanji.Kanji}}" class="huge-kanji-display">{{selectedKanji.Kanji}}</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <strong>Meaning: </strong> {{selectedKanji.Definition}}
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <strong>Readings: </strong> <span class="japanese-text">{{selectedKanji.Reading}}</span>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <strong>Examples: </strong>
+                </div>
+            </div>
+
+            <hr>
+
+            {{#selectedKanji.Examples}}
+
+                <div class="row">
+                    <div class="large-6 columns japanese-text">
+                        <a href="{{'http://jisho.org/search/' + Example}}">{{Example}}</a><br>{{Reading}}
+                    </div>
+                    <div class="large-6 columns">
+                        {{Definition}}
+                    </div>
+                </div>
+                <hr>
+
+            {{/}}
+
+            {{/if}}
+
+        </div>
+    </div>
+
+{{/if}}

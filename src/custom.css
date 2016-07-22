@@ -1,0 +1,23 @@
+.japanese-text {
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+.larger-text {
+    font-size: 18px;
+}
+.kanji-display {
+    font-size: 60px;
+    border: solid 1px grey;
+    margin: 5px 2px 5px 2px;
+}
+.kanji-display.unselected {
+    color: black;
+}
+.huge-kanji-display {
+    font-size:250px;
+    width:100%;
+    text-align:center;
+}
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
