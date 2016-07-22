@@ -1,0 +1,23 @@
+{
+  "name": "static-web-app-stack",
+  "description": "",
+  "repository": "",
+  "devDependencies": {
+    "babel-preset-es2015": "0.0.0",
+    "browserify": "0.0.0",
+    "del": "0.0.0",
+    "event-stream": "0.0.0",
+    "gulp": "0.0.0",
+    "gulp-babel": "0.0.0",
+    "gulp-concat": "0.0.0",
+    "gulp-connect": "0.0.0",
+    "gulp-gh-pages": "0.0.0",
+    "gulp-util": "0.0.0",
+    "run-sequence": "0.0.0",
+    "vinyl-source-stream": "0.0.0"
+  },
+  "dependencies": {
+    "foundation-sites": "0.0.0",
+    "jquery": "0.0.0"
+  }
+}
