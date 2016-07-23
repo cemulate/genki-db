@@ -17,6 +17,8 @@
 
 <div style="height:20px"></div>
 
+{{#if vocab != null && kanji != null}}
+
 {{#if !kanjiMode}}
 
     {{#vocab}}
@@ -64,26 +66,13 @@
             <div class="row">
                 <div class="large-12 columns">
                     <strong>Meaning: </strong> {{selectedKanji.Definition}}
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="large-12 columns">
+                    <hr>
                     <strong>Readings: </strong> <span class="japanese-text">{{selectedKanji.Reading}}</span>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="large-12 columns">
+                    <hr>
                     <strong>Examples: </strong>
+                    <hr>
                 </div>
             </div>
-
-            <hr>
 
             {{#selectedKanji.Examples}}
 
@@ -103,5 +92,15 @@
 
         </div>
     </div>
+
+{{/if}}
+
+{{else}}
+
+<div class="row">
+    <div class="large-12 columns">
+        <img src="res/ajax-loader.gif"/>
+    </div>
+</div>
 
 {{/if}}
