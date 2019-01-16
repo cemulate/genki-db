@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const workboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   devServer: {
@@ -36,6 +37,10 @@ module.exports = {
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       { from: './src/index.html', to: './index.html' }
-    ])
+    ]),
+    new workboxWebpackPlugin.GenerateSW({
+      swDest: 'service-worker.js',
+      include: [ /\.html$/, /\.js$/, /\.css$/ ]
+    }),
   ]
 };
