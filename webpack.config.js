@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const workboxWebpackPlugin = require('workbox-webpack-plugin');
 const vueLoader = require('vue-loader');
@@ -23,7 +23,13 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader',
+          'sass-loader',
+        ]
       },
       {
          test: /\.(png|jpg|gif)$/,
@@ -39,7 +45,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    }),
     new CopyWebpackPlugin([
       { from: './src/index.html', to: './index.html' }
     ]),
