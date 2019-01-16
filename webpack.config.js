@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const workboxWebpackPlugin = require('workbox-webpack-plugin');
+const vueLoader = require('vue-loader');
 
 module.exports = {
   devServer: {
@@ -15,6 +16,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         loader: 'babel-loader',
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
       },
       {
         test: /\.scss$/,
@@ -42,5 +47,6 @@ module.exports = {
       swDest: 'service-worker.js',
       include: [ /\.html$/, /\.js$/, /\.css$/ ]
     }),
+    new vueLoader.VueLoaderPlugin(),
   ]
 };
