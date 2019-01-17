@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const workboxWebpackPlugin = require('workbox-webpack-plugin');
 const vueLoader = require('vue-loader');
 
@@ -48,9 +48,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.css",
     }),
-    new CopyWebpackPlugin([
-      { from: './src/index.html', to: './index.html' }
-    ]),
+    new HtmlWebpackPlugin({
+      meta: { viewport: 'width=device-width, initial-scale=1' },
+      title: 'Genki Vocab',
+    }),
     new workboxWebpackPlugin.GenerateSW({
       swDest: 'service-worker.js',
       include: [ /\.html$/, /\.js$/, /\.css$/ ]
