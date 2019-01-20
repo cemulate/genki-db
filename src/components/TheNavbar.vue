@@ -14,7 +14,7 @@
             <a class="navbar-item" v-on:click="$emit('select-page', 'kanji')">Kanji</a>
         </div>
         <div class="navbar-end">
-            <a class="navbar-item">View on Github</a>
+            <a class="navbar-item" target="_blank" href="https://github.com/cemulate/genki-vocab">View on Github</a>
         </div>
     </div>
 </nav>
