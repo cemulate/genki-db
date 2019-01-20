@@ -2,14 +2,15 @@ import './styles/theme.scss';
 import Vue from 'vue';
 import App from './components/App.vue';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheckSquare, faSquare } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons/faCheckSquare';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faCheckSquare);
 library.add(faSquare);
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 window.addEventListener('load', function() {
     navigator.serviceWorker.register('service-worker.js');
