@@ -1,10 +1,4 @@
-# Static Web App Stack
+# Genki Vocab
 
-A minimal front-end web application using [Webpack](https://webpack.github.io/) and [Foundation 6.4](http://foundation.zurb.com/sites.html)
-
-To try it out, clone the repo and run
-
-```
-npm install
-npm run serve
-```
+A tiny web app to view/browse all the vocab and kanji included in *Genki: An Integrated Course in Elementary Japanese*, with filtering by lesson and helpful links to Jisho.
+Full offline support and basic PWA (progressive web-app) functionality included.
