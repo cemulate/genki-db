@@ -12,7 +12,7 @@ library.add(faSquare);
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js');
+    navigator.serviceWorker.register('service-worker.js');
 });
 
 const body = document.getElementsByTagName('body')[0];
