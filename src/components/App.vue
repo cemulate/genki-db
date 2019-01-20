@@ -35,8 +35,8 @@ import TheNavbar from './TheNavbar.vue';
 import VocabView from './VocabView.vue';
 import KanjiView from './KanjiView.vue';
 
-import vocab from '../res/vocab.json';
-import kanji from '../res/kanji.json';
+import vocab from '../assets/vocab.json';
+import kanji from '../assets/kanji.json';
 
 const lessonNumbers = Array.from(new Set(vocab.map(x => x.Lesson))).sort((a, b) => a - b);
 const lessons = lessonNumbers.map(n => ({
