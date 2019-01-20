@@ -5,10 +5,12 @@ import App from './components/App.vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons/faCheckSquare';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faCheckSquare);
 library.add(faSquare);
+library.add(faExternalLinkAlt);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
