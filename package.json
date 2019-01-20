@@ -1,8 +1,8 @@
 {
-  "name": "new-application",
+  "name": "genki-db",
   "version": "1.0.0",
-  "description": "A new web application",
-  "author": "Author",
+  "description": "Genki DB",
+  "author": "Chase Meadors <c.ed.mead@gmail.com>",
   "scripts": {
     "serve": "webpack-dev-server --mode development",
     "build": "webpack --mode production",

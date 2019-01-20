@@ -1,7 +1,7 @@
 <template>
 <nav class="navbar">
     <div class="navbar-brand">
-        <a class="navbar-item"><strong>Genki Vocab</strong></a>
+        <a class="navbar-item"><strong>Genki DB</strong></a>
         <a role="button" class="navbar-burger" v-on:click="displayNavbarMenu = !displayNavbarMenu">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
