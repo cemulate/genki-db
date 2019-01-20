@@ -1,0 +1,16 @@
+{
+  "icons": [
+    {
+      "src": "icon_196x196.2bbfbd96f35de33a5f3fffa068a6536f.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ],
+  "name": "Genki DB",
+  "short_name": "GenkiDB",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Browse all vocab and kanji covered in Genki I and II",
+  "background_color": "#ffffff"
+}
