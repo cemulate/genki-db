@@ -19,10 +19,8 @@
             </aside>
         </div>
         <div class="column is-10">
-            <div class="columns is-multiline">
-                <vocab-view v-if="mode == 'vocab'" v-bind:lessons="activeLessons"></vocab-view>
-                <kanji-view v-if="mode == 'kanji'" v-bind:lessons="activeLessons"></kanji-view>
-            </div>
+            <vocab-view v-if="mode == 'vocab'" v-bind:lessons="activeLessons"></vocab-view>
+            <kanji-view v-if="mode == 'kanji'" v-bind:lessons="activeLessons"></kanji-view>
         </div>
     </div>
 </div>
