@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const workboxWebpackPlugin = require('workbox-webpack-plugin');
 const vueLoader = require('vue-loader');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
@@ -51,12 +50,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.css",
     }),
-    new CopyWebpackPlugin([
-      { from: 'src/assets/mary-icon.ico', to: 'favicon.ico' },
-    ]),
     new HtmlWebpackPlugin({
       meta: { viewport: 'width=device-width, initial-scale=1' },
       title: 'Genki Vocab',
+      favicon: 'src/assets/favicon.ico',
     }),
     new workboxWebpackPlugin.GenerateSW({
       swDest: 'service-worker.js',
