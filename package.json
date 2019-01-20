@@ -5,7 +5,8 @@
   "author": "Author",
   "scripts": {
     "serve": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "profile": "webpack --mode production --profile"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -28,6 +29,7 @@
     "vue-loader": "^15.5.1",
     "vue-template-compiler": "^2.5.22",
     "webpack": "^4.4.1",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.1",
     "webpack-pwa-manifest": "^4.0.0",
