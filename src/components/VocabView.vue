@@ -12,7 +12,7 @@
             <span class="japanese-text">{{ entry.Kana }}</span>
         </div>
         <div class="column is-3">
-            <a class="japanese-text" v-bind:href="entry.Kanji != null ? `https://jisho.org/search/${ entry.Kanji }` : ''">{{ entry.Kanji || '-' }}</a>
+            <a class="japanese-text" target="_blank" v-bind:href="entry.Kanji != null ? `https://jisho.org/search/${ entry.Kanji }` : ''">{{ entry.Kanji || '-' }}</a>
         </div>
         <div class="column is-6">
             <span class="japanese-text">{{ entry.Meaning }}</span>

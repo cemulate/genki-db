@@ -13,7 +13,7 @@
     </div>
     <div class="column is-2">
         <template v-if="selectedEntry != null">
-            <a v-if="selectedEntry != null" id="selected-kanji-display" v-bind:href="`https://jisho.org/search/${ selectedEntry.Kanji }`">{{ selectedEntry.Kanji }}</a>
+            <a v-if="selectedEntry != null" id="selected-kanji-display" target="_blank" v-bind:href="`https://jisho.org/search/${ selectedEntry.Kanji }`">{{ selectedEntry.Kanji }}</a>
             <hr class="tight">
             <p><strong>Meaning</strong>: {{ selectedEntry.Definition }}</p>
             <hr class="tight">
@@ -23,7 +23,7 @@
             <hr class="tight">
             <template v-for="entry in selectedEntry.Examples">
                 <p>
-                    <a class="japanese-text" v-bind:href="`https://jisho.org/search/${ entry.Example }`">{{ entry.Example }}</a><br>
+                    <a class="japanese-text" target="_blank" v-bind:href="`https://jisho.org/search/${ entry.Example }`">{{ entry.Example }}</a><br>
                     <span class="japanese-text">{{ entry.Reading }}</span><br>
                     <span class="japanese-text">{{ entry.Definition }}</span>
                 </p>
