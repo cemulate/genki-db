@@ -2,6 +2,12 @@ import './styles/theme.scss';
 import Vue from 'vue';
 import App from './components/App.vue';
 
+import Plausible from 'plausible-tracker';
+Plausible({
+    domain: 'cemulate.github.io/genki-db',
+    apiHost: 'https://plausible.351321.xyz',
+}).enableAutoPageviews();
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquare } from '@fortawesome/free-solid-svg-icons/faSquare';
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons/faCheckSquare';
